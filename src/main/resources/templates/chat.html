@@ -17,9 +17,9 @@
         <option th:value="2">Shout</option>
         <option th:value="3">Whisper</option>
     </select>
-    <input type="submit">
+    <input id="messageSubmit" type="submit">
 </form>
-<div th:each="msg: ${chatMessages}">
+<div th:each="msg: ${chatMessages}" class="messageContainer">
     <span th:text="${msg.username}">Username</span>: <span th:text="${msg.messageText}">Hello World!</span>
 </div>
 </body>
